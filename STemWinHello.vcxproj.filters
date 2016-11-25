@@ -459,9 +459,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Src\BASIC_HelloWorld.c">
-      <Filter>Source files</Filter>
-    </ClCompile>
     <ClCompile Include="Src\GUIConf.c">
       <Filter>Source files</Filter>
     </ClCompile>
@@ -691,6 +688,9 @@
       <Filter>Source files\Device-specific files\SystemInit</Filter>
     </ClCompile>
     <ClCompile Include="Src\GUI_X.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\FramewinDLG.c">
       <Filter>Source files</Filter>
     </ClCompile>
   </ItemGroup>

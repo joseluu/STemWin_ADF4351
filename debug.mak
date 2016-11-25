@@ -7,7 +7,7 @@ BINARYDIR := Debug
 #Additional flags
 PREPROCESSOR_MACROS := DEBUG
 INCLUDE_DIRS := Inc C:/Users/jluu/STM32Cube/Repository/STM32Cube_FW_F7_V1.5.1/Middlewares/ST/STemWin/inc
-LIBRARY_DIRS := C:\Users\jluu\STM32Cube\Repository\STM32Cube_FW_F7_V1.5.1\Middlewares\ST\STemWin\lib
+LIBRARY_DIRS := C:\Users\jluu\STM32Cube\Repository\STM32Cube_FW_F7_V1.5.1\Middlewares\ST\STemWin\Lib
 LIBRARY_NAMES := STemWin532_CM7_GCC
 ADDITIONAL_LINKER_INPUTS := 
 MACOS_FRAMEWORKS := 
