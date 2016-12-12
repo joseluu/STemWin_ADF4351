@@ -2,122 +2,122 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source files">
-      <UniqueIdentifier>{fede656e-5585-4387-9246-93bb31513bf1}</UniqueIdentifier>
+      <UniqueIdentifier>{13bbc986-18d4-4181-8a7b-fae3abe45c88}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="Header files">
-      <UniqueIdentifier>{1662a100-9140-4037-b7f3-d880476d6782}</UniqueIdentifier>
+      <UniqueIdentifier>{be3a98ae-ccdb-42da-8e3b-db29668ad3df}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
     <Filter Include="Resource files">
-      <UniqueIdentifier>{6d74afcb-ed20-4c7c-bf39-e1a5c860b6e0}</UniqueIdentifier>
+      <UniqueIdentifier>{3a78cd7c-4b06-4ad7-9aff-441dbb7bafa6}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
     <Filter Include="Make files">
-      <UniqueIdentifier>{e8bfa13f-40ed-4131-b565-0e64063a2de7}</UniqueIdentifier>
+      <UniqueIdentifier>{48334753-000e-4e8f-9974-ac77747e568d}</UniqueIdentifier>
       <Extensions>*.mak</Extensions>
     </Filter>
     <Filter Include="Source files\Device-specific files">
-      <UniqueIdentifier>{d9c4cce8-506c-4ec8-b92d-7d41d9e7e131}</UniqueIdentifier>
+      <UniqueIdentifier>{0b03c92e-ab98-4676-8c60-b79deeea4994}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files">
-      <UniqueIdentifier>{ca27f70a-2359-4f55-92a0-5659ab244a5c}</UniqueIdentifier>
+      <UniqueIdentifier>{4c588c9d-3099-475d-b2d9-456bf2970cd1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\HAL">
-      <UniqueIdentifier>{dd523b32-7920-47a1-93d1-8af0f61e7e3c}</UniqueIdentifier>
+      <UniqueIdentifier>{472b3578-b888-4caa-9ddd-7c931ff0f973}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\HAL">
-      <UniqueIdentifier>{6c99126a-850d-4131-89a6-12e0ec1e86dd}</UniqueIdentifier>
+      <UniqueIdentifier>{829fd14b-da8b-4af9-a66a-d1cb7c81c0e7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\SystemInit">
-      <UniqueIdentifier>{127ffbb3-3638-445a-92e5-8bf417db193a}</UniqueIdentifier>
+      <UniqueIdentifier>{585a5746-a7f7-4af4-8a76-1ec0aff945cf}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\SystemInit">
-      <UniqueIdentifier>{afb37383-0dda-4c8f-b4cb-a27ecc110e69}</UniqueIdentifier>
+      <UniqueIdentifier>{f7dd4a0c-1f16-4d8e-aacd-2eeeff269be9}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\Board">
-      <UniqueIdentifier>{b192d153-ad47-42d2-a4ce-2f299416c1b1}</UniqueIdentifier>
+      <UniqueIdentifier>{30e3923a-4d61-4a57-a438-b46fe7ec0474}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\Board">
-      <UniqueIdentifier>{237b2de6-93ef-4937-bdbc-9b1ce17de2f3}</UniqueIdentifier>
+      <UniqueIdentifier>{1b879642-0771-4c21-9439-ef577a98549a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\ampire480272 Driver">
-      <UniqueIdentifier>{c6c3d4c1-cf92-463d-a55c-c53c99c2e455}</UniqueIdentifier>
+      <UniqueIdentifier>{c1a5f0b2-b1ab-4697-8d59-b9937d2c5fbf}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\ampire480272 Driver">
-      <UniqueIdentifier>{7645a07b-1683-4ef3-af3d-7b2e857e857c}</UniqueIdentifier>
+      <UniqueIdentifier>{7a3f7f97-0e31-4357-a829-c12ac7401fad}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\ampire640480 Driver">
-      <UniqueIdentifier>{1a827b0e-6b9c-42ff-ba7f-02a8ec0bb483}</UniqueIdentifier>
+      <UniqueIdentifier>{e0ed8856-2168-406f-8967-a06966da0849}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\ampire640480 Driver">
-      <UniqueIdentifier>{443a44f4-9c52-404d-98fc-f53df72737d9}</UniqueIdentifier>
+      <UniqueIdentifier>{b45f10b2-8ab2-4a68-9683-4b94e77f4ec9}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\exc7200 Driver">
-      <UniqueIdentifier>{76aa6897-af57-49b0-94ff-2165da465cf0}</UniqueIdentifier>
+      <UniqueIdentifier>{b41d3102-1d56-4491-9f4f-b3c839875c8d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\exc7200 Driver">
-      <UniqueIdentifier>{8d42f1a1-1e6b-4246-8414-2c5ea9f55e67}</UniqueIdentifier>
+      <UniqueIdentifier>{2f8140ca-a8d4-43f7-abbe-38119b03ab2c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\ft5336 Driver">
-      <UniqueIdentifier>{7501c4f7-d990-469c-9122-b08a48418e46}</UniqueIdentifier>
+      <UniqueIdentifier>{5e1db15c-50a3-4286-8c8a-d2b773f6810c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\ft5336 Driver">
-      <UniqueIdentifier>{1bcaeacf-9005-4c72-b54a-8dd945039241}</UniqueIdentifier>
+      <UniqueIdentifier>{02d1b257-1920-4598-99a0-62bdc36250d3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\mfxstm32l152 Driver">
-      <UniqueIdentifier>{dc96549c-4d90-4ae3-ab79-1df5c235f0fc}</UniqueIdentifier>
+      <UniqueIdentifier>{7c336557-094d-40a9-8ba8-3c5e667d6a7a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\mfxstm32l152 Driver">
-      <UniqueIdentifier>{118f4a3e-6a26-413f-8524-5f01d47b0408}</UniqueIdentifier>
+      <UniqueIdentifier>{d9ce149f-5bb3-4db2-b068-3e7340afe060}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\n25q128a Driver">
-      <UniqueIdentifier>{37244179-6f45-4f69-ba0a-66389a460d3f}</UniqueIdentifier>
+      <UniqueIdentifier>{64d84501-8bc1-4997-988d-97fe7fa22c18}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\n25q128a Driver">
-      <UniqueIdentifier>{650c291f-9ed7-4277-be27-11abc435b02b}</UniqueIdentifier>
+      <UniqueIdentifier>{d3f2d098-e699-4a76-a67c-548dcf3a99b3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\n25q512a Driver">
-      <UniqueIdentifier>{2a9d93de-7de7-4cb2-ab9b-6a2a4389f259}</UniqueIdentifier>
+      <UniqueIdentifier>{261a9cb5-ece4-4e88-b40f-f0e94176ea7f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\n25q512a Driver">
-      <UniqueIdentifier>{0d87bc2c-b608-4b36-b78b-199c887eb59c}</UniqueIdentifier>
+      <UniqueIdentifier>{4034f9cb-4901-4412-bd09-cf817fe2359c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\ov9655 Driver">
-      <UniqueIdentifier>{d84d3633-6c4d-49ed-b775-6417254f9fd6}</UniqueIdentifier>
+      <UniqueIdentifier>{34040063-e1ef-4efc-9bd5-cbf7642c8f7d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\ov9655 Driver">
-      <UniqueIdentifier>{6fb098ea-c724-4e72-974f-803fda36676c}</UniqueIdentifier>
+      <UniqueIdentifier>{082a6419-f85c-4436-8826-155fcfe50152}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\rk043fn48h Driver">
-      <UniqueIdentifier>{84807d03-7a2f-428a-b70f-e94cb5507560}</UniqueIdentifier>
+      <UniqueIdentifier>{081c8ef4-207c-4474-84f6-a07309a203f7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\rk043fn48h Driver">
-      <UniqueIdentifier>{2d50b58c-0ed4-42a0-9a1b-777a06a583aa}</UniqueIdentifier>
+      <UniqueIdentifier>{a74eb999-1c2d-4e2b-9682-83db335f1ae8}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\s5k5cag Driver">
-      <UniqueIdentifier>{987f2ec6-4ddc-425f-b8c3-1ef0cb6e074c}</UniqueIdentifier>
+      <UniqueIdentifier>{48e4d1ae-343d-44ac-86ba-d30b337488ab}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\s5k5cag Driver">
-      <UniqueIdentifier>{6c46d9f7-1dee-4405-9098-192376998b1a}</UniqueIdentifier>
+      <UniqueIdentifier>{a1422ef2-755e-4748-8b3c-7f2c2598413c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\stmpe811 Driver">
-      <UniqueIdentifier>{a9ab9ef5-eeb4-4042-910b-8256f38d0c11}</UniqueIdentifier>
+      <UniqueIdentifier>{b5670259-aedc-46c7-afaf-9f943f67eeb2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\stmpe811 Driver">
-      <UniqueIdentifier>{91ad6066-908d-4617-9f43-21f9e24dfb07}</UniqueIdentifier>
+      <UniqueIdentifier>{52d704bb-f921-4231-8af1-20a74cb18775}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\ts3510 Driver">
-      <UniqueIdentifier>{7d418395-954d-4272-910d-953d8f02fccf}</UniqueIdentifier>
+      <UniqueIdentifier>{4b586c49-a743-4a2a-b911-bcad03fadd8c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\ts3510 Driver">
-      <UniqueIdentifier>{2240d73f-8caf-465c-b5c1-94a965b084c5}</UniqueIdentifier>
+      <UniqueIdentifier>{d6f5a6f5-73e9-404b-8a0c-531ef663bf01}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source files\Device-specific files\wm8994 Driver">
-      <UniqueIdentifier>{11ec6972-5dd9-487f-9ba6-caec2b5b4129}</UniqueIdentifier>
+      <UniqueIdentifier>{a0fdabe8-ad39-4361-b2ac-bebccc54dad8}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header files\Device-specific files\wm8994 Driver">
-      <UniqueIdentifier>{82388df8-7054-47bb-a81c-84b4c2e8c987}</UniqueIdentifier>
+      <UniqueIdentifier>{84915fce-52e5-44d2-8aef-f47840ac8aba}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -382,9 +382,6 @@
     <ClInclude Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\CMSIS_HAL\RTOS\Template\cmsis_os.h">
       <Filter>Header files\Device-specific files\HAL</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\STM32756G_EVAL\stm32756g_eval.h">
-      <Filter>Header files\Device-specific files\Board</Filter>
-    </ClInclude>
     <ClInclude Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\Components\ampire480272\ampire480272.h">
       <Filter>Header files\Device-specific files\ampire480272 Driver</Filter>
     </ClInclude>
@@ -420,6 +417,21 @@
     </ClInclude>
     <ClInclude Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\Components\Common\tsensor.h">
       <Filter>Header files\Device-specific files\ampire480272 Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="USER\ADF4350_V1.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\STM32746G-Discovery\stm32746g_discovery.h">
+      <Filter>Header files\Device-specific files\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\STM32746G-Discovery\stm32746g_discovery_lcd.h">
+      <Filter>Header files\Device-specific files\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\STM32746G-Discovery\stm32746g_discovery_sdram.h">
+      <Filter>Header files\Device-specific files\Board</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\STM32746G-Discovery\stm32746g_discovery_ts.h">
+      <Filter>Header files\Device-specific files\Board</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\Components\ampire640480\ampire640480.h">
       <Filter>Header files\Device-specific files\ampire640480 Driver</Filter>
@@ -457,15 +469,21 @@
     <ClInclude Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\Components\wm8994\wm8994.h">
       <Filter>Header files\Device-specific files\wm8994 Driver</Filter>
     </ClInclude>
+    <ClInclude Include="Inc\FrameWinDLGSweeper.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inc\k_touch.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\GUIConf.c">
       <Filter>Source files</Filter>
     </ClCompile>
-    <ClCompile Include="Src\LCDConf.c">
+    <ClCompile Include="Src\GUI_X.c">
       <Filter>Source files</Filter>
     </ClCompile>
-    <ClCompile Include="Src\main.c">
+    <ClCompile Include="Src\LCDConf.c">
       <Filter>Source files</Filter>
     </ClCompile>
     <ClCompile Include="Src\stm32f7xx_it.c">
@@ -654,9 +672,6 @@
     <ClCompile Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\STM32F7xx_HAL_Driver\Src\stm32f7xx_ll_usb.c">
       <Filter>Source files\Device-specific files\HAL</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\STM32756G_EVAL\stm32756g_eval.c">
-      <Filter>Source files\Device-specific files\Board</Filter>
-    </ClCompile>
     <ClCompile Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\Components\exc7200\exc7200.c">
       <Filter>Source files\Device-specific files\exc7200 Driver</Filter>
     </ClCompile>
@@ -681,16 +696,34 @@
     <ClCompile Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\Components\wm8994\wm8994.c">
       <Filter>Source files\Device-specific files\wm8994 Driver</Filter>
     </ClCompile>
-    <ClCompile Include="Src\stm32746g_discovery_sdram.c">
-      <Filter>Source files</Filter>
-    </ClCompile>
     <ClCompile Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\CMSIS_HAL\Device\ST\STM32F7xx\Source\Templates\system_stm32f7xx.c">
       <Filter>Source files\Device-specific files\SystemInit</Filter>
     </ClCompile>
-    <ClCompile Include="Src\GUI_X.c">
+    <ClCompile Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\STM32746G-Discovery\stm32746g_discovery.c">
+      <Filter>Source files\Device-specific files\Board</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\STM32746G-Discovery\stm32746g_discovery_lcd.c">
+      <Filter>Source files\Device-specific files\Board</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\STM32746G-Discovery\stm32746g_discovery_sdram.c">
+      <Filter>Source files\Device-specific files\Board</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jluu\AppData\Local\VisualGDB\EmbeddedBSPs\arm-eabi\com.sysprogs.arm.stm32\STM32F7xxxx\BSP\STM32746G-Discovery\stm32746g_discovery_ts.c">
+      <Filter>Source files\Device-specific files\Board</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\k_touch.c">
       <Filter>Source files</Filter>
     </ClCompile>
-    <ClCompile Include="Src\FramewinDLG.c">
+    <ClCompile Include="Src\main.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ADF4350_V1.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\FramewinDLGSweeper.c">
+      <Filter>Source files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\SubdialogKey.c">
       <Filter>Source files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -48,6 +48,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "WM.h"
+#include "k_touch.h"
+#include "ADF4350_V1.h"
+#include "FrameWinDLGSweeper.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -55,6 +58,7 @@
 /* Private variables ---------------------------------------------------------*/
 uint8_t GUI_Initialized = 0;
 TIM_HandleTypeDef TimHandle;
+TIM_HandleTypeDef TimHandle4;
 uint32_t uwPrescalerValue = 0;
 
 /* Private function prototypes -----------------------------------------------*/
@@ -63,8 +67,46 @@ void BSP_Background(void);
 
 extern void MainTask(void);
 static void CPU_CACHE_Enable(void);
+void SweepTimerStart(void);
+void SweepTimerStop(void);
 
 /* Private functions ---------------------------------------------------------*/
+
+void SweepTimerStart(){
+	if (HAL_TIM_Base_Start_IT(&TimHandle4) != HAL_OK)
+		while (1) {}
+}
+
+void SweepTimerStop()
+{
+	if (HAL_TIM_Base_Stop_IT(&TimHandle4) != HAL_OK)
+		while (1) {}
+}
+
+
+void MX_GPIO_Init(void)
+{
+	GPIO_InitTypeDef GPIO_InitStruct;
+	__HAL_RCC_GPIOA_CLK_ENABLE();
+__HAL_RCC_GPIOF_CLK_ENABLE();
+
+  /*Configure GPIO pins : PF7 PF6 PF9 PF8 */
+GPIO_InitStruct.Pin = GPIO_PIN_7 | GPIO_PIN_6 | GPIO_PIN_9 | GPIO_PIN_8;
+GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+GPIO_InitStruct.Pull = GPIO_NOPULL;
+GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
+HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
+
+//A0 as a debug pin
+	GPIO_InitStruct.Pin = GPIO_PIN_0;
+	HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PF10 */
+GPIO_InitStruct.Pin = GPIO_PIN_10;
+GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+GPIO_InitStruct.Pull = GPIO_NOPULL;
+HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
+}
 
 /**
   * @brief  Main program
@@ -89,43 +131,49 @@ int main(void)
   
   /* Configure LED1 */
   BSP_LED_Init(LED1);
+	MX_GPIO_Init();
+	extern	void TOUCH_X_Init(void);
+	  //TOUCH_X_Init();
+	k_TouchInit(480, 277);
 
   /***********************************************************/
   
-  /* Compute the prescaler value to have TIM3 counter clock equal to 10 KHz */
-  uwPrescalerValue = (uint32_t) ((SystemCoreClock /2) / 10000) - 1;
+	TIM_ClockConfigTypeDef sClockSourceConfig;
+	sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+	/* Compute the prescaler value to have TIM3 counter clock equal to 10 KHz */
+	uwPrescalerValue = (uint32_t) ((SystemCoreClock /2) / 10000) - 1;
   
-  /* Set TIMx instance */
-  TimHandle.Instance = TIM3;
+	/* Set TIMx instance */
+	TimHandle.Instance = TIM3;
    
-  /* Initialize TIM3 peripheral as follows:
-       + Period = 500 - 1
-       + Prescaler = ((SystemCoreClock/2)/10000) - 1
-       + ClockDivision = 0
-       + Counter direction = Up
-  */
-  TimHandle.Init.Period = 500 - 1;
-  TimHandle.Init.Prescaler = uwPrescalerValue;
-  TimHandle.Init.ClockDivision = 0;
-  TimHandle.Init.CounterMode = TIM_COUNTERMODE_UP;
-  if(HAL_TIM_Base_Init(&TimHandle) != HAL_OK)
-  {
-    while(1) 
-    {
-    }
-  }
-  
-  /*##-2- Start the TIM Base generation in interrupt mode ####################*/
-  /* Start Channel1 */
-  if(HAL_TIM_Base_Start_IT(&TimHandle) != HAL_OK)
-  {
-    while(1) 
-    {
-    }
-  }
-  
+	TimHandle.Init.Period = 500 - 1; //20ms
+	TimHandle.Init.Prescaler = uwPrescalerValue;
+	TimHandle.Init.ClockDivision = TIM_ETRPRESCALER_DIV1;
+	TimHandle.Init.CounterMode = TIM_COUNTERMODE_UP;
+	if (HAL_TIM_Base_Init(&TimHandle) != HAL_OK)
+		while (1) ;
+	if (HAL_TIM_ConfigClockSource(&TimHandle, &sClockSourceConfig) != HAL_OK)
+		while (1) ;
+	if (HAL_TIM_Base_Start_IT(&TimHandle) != HAL_OK)  // START in interrupt mode
+	while (1) ;
+
+	TimHandle4.Instance = TIM4;
+  /* Compute the prescaler value to have TIM4 counter clock equal to 1 MHz */
+	uwPrescalerValue = ((SystemCoreClock / 2) / 1000000) - 1;
+	TimHandle4.Init.Prescaler = uwPrescalerValue;
+	TimHandle4.Init.Period = 100- 1; //100us
+	TimHandle4.Init.Prescaler = uwPrescalerValue;
+	TimHandle4.Init.ClockDivision = TIM_ETRPRESCALER_DIV1;
+	TimHandle4.Init.CounterMode = TIM_COUNTERMODE_UP;
+
+  if (HAL_TIM_Base_Init(&TimHandle4) != HAL_OK)
+		while (1) ;
+
+  if (HAL_TIM_ConfigClockSource(&TimHandle4, &sClockSourceConfig) != HAL_OK)
+		while (1);
+
+
   /***********************************************************/
-  
   /* Init the STemWin GUI Library */
   BSP_SDRAM_Init(); /* Initializes the SDRAM device */
   __HAL_RCC_CRC_CLK_ENABLE(); /* Enable the CRC Module */
@@ -136,12 +184,24 @@ int main(void)
   GUI_Initialized = 1;
   
   /* Activate the use of memory device feature */
-  WM_SetCreateFlags(WM_CF_MEMDEV);
-    
+  //WM_SetCreateFlags(WM_CF_MEMDEV);
+
+#ifdef WIDGET_TEST
   MainTask();
-  
+#else
+	ADF4351_Init();
+	reset_all_reg();
+	WM_HWIN hWin;
+	hWin = CreateFramewin();
+#endif
+
   /* Infinite loop */
-  for(;;);
+	while (1) {
+		DisplayCurrentFrequency(hWin,GetCurrentFrequency());
+		GUI_Exec();
+		GUI_Delay(10);
+		//k_TouchUpdate();
+	}
 }
 
 /**
@@ -151,7 +211,12 @@ int main(void)
   */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-  BSP_Background();
+	if (htim->Instance == TIM3) {
+		k_TouchUpdate(); 
+		BSP_Background();
+	} else if  (htim->Instance == TIM4){
+		SweepTimerTick();
+	}
 }
 
 /**
@@ -166,14 +231,17 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef *htim)
 {
   /*##-1- Enable peripherals and GPIO Clocks #################################*/
   /* TIMx Peripheral clock enable */
-  __HAL_RCC_TIM3_CLK_ENABLE();
+	__HAL_RCC_TIM3_CLK_ENABLE();
+	__HAL_RCC_TIM4_CLK_ENABLE();
 
   /*##-2- Configure the NVIC for TIMx ########################################*/
   /* Set the TIMx priority */
-  HAL_NVIC_SetPriority(TIM3_IRQn, 0, 1);
+  HAL_NVIC_SetPriority(TIM3_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(TIM4_IRQn, 1, 1);
   
   /* Enable the TIMx global Interrupt */
   HAL_NVIC_EnableIRQ(TIM3_IRQn);
+  HAL_NVIC_EnableIRQ(TIM4_IRQn);
 }
 
 /**
@@ -217,10 +285,12 @@ static void SystemClock_Config(void)
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+
   RCC_OscInitStruct.PLL.PLLM = 25;
-  RCC_OscInitStruct.PLL.PLLN = 400;  
+  RCC_OscInitStruct.PLL.PLLN = 400;  // 128Mhz processor clock
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 8;
+
 
   ret = HAL_RCC_OscConfig(&RCC_OscInitStruct);
   if(ret != HAL_OK)

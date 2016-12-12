@@ -48,6 +48,7 @@
 extern volatile GUI_TIMER_TIME OS_TimeMS;
 extern LTDC_HandleTypeDef hltdc;
 extern TIM_HandleTypeDef TimHandle;
+extern TIM_HandleTypeDef TimHandle4;
 
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
@@ -160,11 +161,21 @@ void SysTick_Handler(void)
   * @param  None
   * @retval None
   */
-void TIM3_IRQHandler(void)
+void TIM4_IRQHandler(void)
 {
-  HAL_TIM_IRQHandler(&TimHandle);
+  HAL_TIM_IRQHandler(&TimHandle4);
 }
 
+
+/**
+  * @brief  This function handles TIM interrupt request.
+  * @param  None
+  * @retval None
+  */
+void TIM3_IRQHandler(void)
+{
+	HAL_TIM_IRQHandler(&TimHandle);
+}
 /**
   * @brief  This function handles LTDC global interrupt request.
   * @param  None

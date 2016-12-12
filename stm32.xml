@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<EmbeddedProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+  <BspID>com.sysprogs.arm.stm32</BspID>
+  <BspVersion>3.3</BspVersion>
+  <McuID>STM32F746NE</McuID>
+  <MCUDefinitionFile>STM32F7xxxx/DeviceDefinitions/stm32f746xx.xml</MCUDefinitionFile>
+  <MCUProperties>
+    <Entries>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.primary_memory</Key>
+        <Value>flash</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.arm.floatmode</Key>
+        <Value>-mfloat-abi=hard</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.toolchainoptions.arm.libctype</Key>
+        <Value />
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.toolchainoptions.arm.compactcpp</Key>
+        <Value>compactcpp</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.toolchainoptions.arm.libnosys</Key>
+        <Value />
+      </KeyValue>
+    </Entries>
+  </MCUProperties>
+  <BSPSourceFolderName>Device-specific files</BSPSourceFolderName>
+  <MCUMakFile>stm32.mak</MCUMakFile>
+  <ReferencedFrameworks>
+    <string>com.sysprogs.arm.stm32.hal</string>
+    <string>com.sysprogs.arm.stm32.bspdrv.stm2746g-discovery</string>
+    <string>com.sysprogs.arm.stm32.hal_systeminit</string>
+    <string>com.sysprogs.arm.stm32.bspdrv.f7_ampire480272</string>
+    <string>com.sysprogs.arm.stm32.bspdrv.f7_ampire640480</string>
+    <string>com.sysprogs.arm.stm32.bspdrv.f7_exc7200</string>
+    <string>com.sysprogs.arm.stm32.bspdrv.f7_ft5336</string>
+    <string>com.sysprogs.arm.stm32.bspdrv.f7_mfxstm32l152</string>
+    <string>com.sysprogs.arm.stm32.bspdrv.f7_n25q128a</string>
+    <string>com.sysprogs.arm.stm32.bspdrv.f7_n25q512a</string>
+    <string>com.sysprogs.arm.stm32.bspdrv.f7_ov9655</string>
+    <string>com.sysprogs.arm.stm32.bspdrv.f7_rk043fn48h</string>
+    <string>com.sysprogs.arm.stm32.bspdrv.f7_s5k5cag</string>
+    <string>com.sysprogs.arm.stm32.bspdrv.f7_stmpe811</string>
+    <string>com.sysprogs.arm.stm32.bspdrv.f7_ts3510</string>
+    <string>com.sysprogs.arm.stm32.bspdrv.f7_wm8994</string>
+  </ReferencedFrameworks>
+  <FrameworkProperties>
+    <Entries>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.stm32746g_discovery.audio</Key>
+        <Value />
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.stm32746g_discovery.camera</Key>
+        <Value />
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.stm32746g_discovery.eeprom</Key>
+        <Value />
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.stm32746g_discovery.lcd</Key>
+        <Value>1</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.stm32746g_discovery.qspi</Key>
+        <Value />
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.stm32746g_discovery.sd</Key>
+        <Value />
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.stm32746g_discovery.sdram</Key>
+        <Value>1</Value>
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.stm32746g_discovery.ts</Key>
+        <Value>1</Value>
+      </KeyValue>
+    </Entries>
+  </FrameworkProperties>
+</EmbeddedProfile>

@@ -56,6 +56,7 @@
 /* EVAL includes component */
 #include "stm32746g_discovery.h"
 #include "stm32746g_discovery_sdram.h"
+#include "stm32746g_discovery_ts.h"
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
