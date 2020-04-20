@@ -50,6 +50,7 @@
 #define __MAIN_H
 
 /* Includes ------------------------------------------------------------------*/
+#include "stm32f746xx.h"
 #include "stm32f7xx_hal.h"
 #include "GUI.h"
 

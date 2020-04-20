@@ -1,0 +1,9 @@
+.gitignore
+Debug
+Release
+CodeDB
+.vs
+*.old
+*VC.db
+*VC.opendb
+VisualGDBCache

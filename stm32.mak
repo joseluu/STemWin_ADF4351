@@ -3,22 +3,19 @@
 #DO NOT EDIT MANUALLY. THE FILE WILL BE OVERWRITTEN. 
 #Use VisualGDB Project Properties dialog or modify Makefile or per-configuration .mak files instead.
 
-#VisualGDB provides BSP_ROOT and TOOLCHAIN_ROOT via environment when running Make. The line below will only be active if GNU Make is started manually.
-BSP_ROOT ?= $(LOCALAPPDATA)/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.stm32
-TOOLCHAIN_ROOT ?= C:/SysGCC/arm-eabi
-
+#In order to build this project manually (outside VisualGDB), please provide TOOLCHAIN_ROOT, BSP_ROOT, EFP_BASE and TESTFW_BASE variables via Environment or Make command line
 #Embedded toolchain
-CC := $(TOOLCHAIN_ROOT)/bin/arm-eabi-gcc.exe
-CXX := $(TOOLCHAIN_ROOT)/bin/arm-eabi-g++.exe
+CC := $(TOOLCHAIN_ROOT)/bin/arm-none-eabi-gcc.exe
+CXX := $(TOOLCHAIN_ROOT)/bin/arm-none-eabi-g++.exe
 LD := $(CXX)
-AR := $(TOOLCHAIN_ROOT)/bin/arm-eabi-ar.exe
-OBJCOPY := $(TOOLCHAIN_ROOT)/bin/arm-eabi-objcopy.exe
+AR := $(TOOLCHAIN_ROOT)/bin/arm-none-eabi-ar.exe
+OBJCOPY := $(TOOLCHAIN_ROOT)/bin/arm-none-eabi-objcopy.exe
 
 #Additional flags
-PREPROCESSOR_MACROS += ARM_MATH_CM7 STM32F746NE stm32_flash_layout STM32F746xx
-INCLUDE_DIRS += . $(BSP_ROOT)/STM32F7xxxx/STM32F7xx_HAL_Driver/Inc $(BSP_ROOT)/STM32F7xxxx/STM32F7xx_HAL_Driver/Inc/Legacy $(BSP_ROOT)/STM32F7xxxx/CMSIS_HAL/Device/ST/STM32F7xx/Include $(BSP_ROOT)/STM32F7xxxx/CMSIS_HAL/Include $(BSP_ROOT)/STM32F7xxxx/CMSIS_HAL/RTOS/Template $(BSP_ROOT)/STM32F7xxxx/BSP/STM32746G-Discovery $(BSP_ROOT)/STM32F7xxxx/BSP/Components/ampire480272 $(BSP_ROOT)/STM32F7xxxx/BSP/Components/Common $(BSP_ROOT)/STM32F7xxxx/BSP/Components/ampire640480 $(BSP_ROOT)/STM32F7xxxx/BSP/Components/Common $(BSP_ROOT)/STM32F7xxxx/BSP/Components/Common $(BSP_ROOT)/STM32F7xxxx/BSP/Components/exc7200 $(BSP_ROOT)/STM32F7xxxx/BSP/Components/Common $(BSP_ROOT)/STM32F7xxxx/BSP/Components/ft5336 $(BSP_ROOT)/STM32F7xxxx/BSP/Components/Common $(BSP_ROOT)/STM32F7xxxx/BSP/Components/mfxstm32l152 $(BSP_ROOT)/STM32F7xxxx/BSP/Components/Common $(BSP_ROOT)/STM32F7xxxx/BSP/Components/n25q128a $(BSP_ROOT)/STM32F7xxxx/BSP/Components/Common $(BSP_ROOT)/STM32F7xxxx/BSP/Components/n25q512a $(BSP_ROOT)/STM32F7xxxx/BSP/Components/Common $(BSP_ROOT)/STM32F7xxxx/BSP/Components/ov9655 $(BSP_ROOT)/STM32F7xxxx/BSP/Components/Common $(BSP_ROOT)/STM32F7xxxx/BSP/Components/rk043fn48h $(BSP_ROOT)/STM32F7xxxx/BSP/Components/Common $(BSP_ROOT)/STM32F7xxxx/BSP/Components/s5k5cag $(BSP_ROOT)/STM32F7xxxx/BSP/Components/Common $(BSP_ROOT)/STM32F7xxxx/BSP/Components/stmpe811 $(BSP_ROOT)/STM32F7xxxx/BSP/Components/Common $(BSP_ROOT)/STM32F7xxxx/BSP/Components/ts3510 $(BSP_ROOT)/STM32F7xxxx/BSP/Components/Common $(BSP_ROOT)/STM32F7xxxx/BSP/Components/wm8994
+PREPROCESSOR_MACROS += ARM_MATH_CM7 flash_layout STM32F746NE STM32F746xx USE_HAL_DRIVER 
+INCLUDE_DIRS += . $(BSP_ROOT)/STM32F7xxxx/STM32F7xx_HAL_Driver/Inc $(BSP_ROOT)/STM32F7xxxx/STM32F7xx_HAL_Driver/Inc/Legacy $(BSP_ROOT)/STM32F7xxxx/CMSIS_HAL/Core/Include $(BSP_ROOT)/STM32F7xxxx/CMSIS_HAL/Device/ST/STM32F7xx/Include $(BSP_ROOT)/STM32F7xxxx/CMSIS_HAL/Include $(BSP_ROOT)/STM32F7xxxx/CMSIS_HAL/RTOS2/Include $(BSP_ROOT)/STM32H7xxxx/BSP/Components/ampire480272 $(BSP_ROOT)/STM32H7xxxx/BSP/Components/Common $(BSP_ROOT)/STM32H7xxxx/BSP/Components/ampire640480 $(BSP_ROOT)/STM32H7xxxx/BSP/Components/exc7200 $(BSP_ROOT)/STM32H7xxxx/BSP/Components/ft5336 $(BSP_ROOT)/STM32H7xxxx/BSP/Components/mfxstm32l152 $(BSP_ROOT)/STM32H7xxxx/BSP/Components/ov9655 $(BSP_ROOT)/STM32H7xxxx/BSP/Components/rk043fn48h $(BSP_ROOT)/STM32H7xxxx/BSP/Components/s5k5cag $(BSP_ROOT)/STM32H7xxxx/BSP/Components/stmpe811 $(BSP_ROOT)/STM32H7xxxx/BSP/Components/ts3510 $(BSP_ROOT)/STM32H7xxxx/BSP/Components/wm8994
 LIBRARY_DIRS += 
-LIBRARY_NAMES += compactcpp
+LIBRARY_NAMES += 
 ADDITIONAL_LINKER_INPUTS += 
 MACOS_FRAMEWORKS += 
 LINUX_PACKAGES += 
@@ -26,7 +23,7 @@ LINUX_PACKAGES +=
 CFLAGS += 
 CXXFLAGS += 
 ASFLAGS += 
-LDFLAGS +=  
-COMMONFLAGS += -mcpu=cortex-m7 -mthumb -mfloat-abi=hard
+LDFLAGS +=  --specs=nosys.specs
+COMMONFLAGS += -mcpu=cortex-m7 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard
 LINKER_SCRIPT := $(BSP_ROOT)/STM32F7xxxx/LinkerScripts/STM32F746NE_flash.lds
 

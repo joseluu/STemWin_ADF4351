@@ -6,7 +6,7 @@ BINARYDIR := Debug
 
 #Additional flags
 PREPROCESSOR_MACROS := DEBUG
-INCLUDE_DIRS := Inc ../STemWin_Library_V1.2.0/Libraries/STemWinLibrary532/inc
+INCLUDE_DIRS := Inc ../STemWin_Library_V1.2.0/Libraries/STemWinLibrary532/inc C:/Users/jluu/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.stm32/STM32F7xxxx/BSP/STM32746G-Discovery C:/Users/jluu/AppData/Local/VisualGDB/EmbeddedBSPs/arm-eabi/com.sysprogs.arm.stm32/VendorSamples/H7/Projects/STM32H743I-EVAL/Applications/Audio/Audio_playback_and_record/Inc
 LIBRARY_DIRS := ../STemWin_Library_V1.2.0/Libraries/STemWinLibrary532/Lib
 LIBRARY_NAMES := STemWin532_CM7_GCC
 ADDITIONAL_LINKER_INPUTS := 

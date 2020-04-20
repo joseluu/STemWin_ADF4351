@@ -1,8 +1,11 @@
 <?xml version="1.0"?>
 <EmbeddedProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ToolchainID>com.visualgdb.arm-eabi</ToolchainID>
+  <ToolchainVersion>
+    <Revision>0</Revision>
+  </ToolchainVersion>
   <BspID>com.sysprogs.arm.stm32</BspID>
-  <BspVersion>3.3</BspVersion>
+  <BspVersion>2020.01</BspVersion>
   <McuID>STM32F746NE</McuID>
   <MCUDefinitionFile>STM32F7xxxx/DeviceDefinitions/stm32f746xx.xml</MCUDefinitionFile>
   <MCUProperties>
@@ -16,8 +19,15 @@
         <Value>-mfloat-abi=hard</Value>
       </KeyValue>
       <KeyValue>
+        <Key>com.sysprogs.mcuoptions.ignore_startup_file</Key>
+      </KeyValue>
+      <KeyValue>
         <Key>com.sysprogs.toolchainoptions.arm.libctype</Key>
         <Value />
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.toolchainoptions.arm.syscallspecs</Key>
+        <Value>--specs=nosys.specs</Value>
       </KeyValue>
       <KeyValue>
         <Key>com.sysprogs.toolchainoptions.arm.compactcpp</Key>
@@ -33,7 +43,7 @@
   <MCUMakFile>stm32.mak</MCUMakFile>
   <ReferencedFrameworks>
     <string>com.sysprogs.arm.stm32.hal</string>
-    <string>com.sysprogs.arm.stm32.bspdrv.stm2746g-discovery</string>
+    <string>com.sysprogs.arm.stm32.ll</string>
     <string>com.sysprogs.arm.stm32.hal_systeminit</string>
     <string>com.sysprogs.arm.stm32.bspdrv.f7_ampire480272</string>
     <string>com.sysprogs.arm.stm32.bspdrv.f7_ampire640480</string>
@@ -51,6 +61,13 @@
   </ReferencedFrameworks>
   <FrameworkProperties>
     <Entries>
+      <KeyValue>
+        <Key>com.sysprogs.stm32.legacy_hal_src</Key>
+        <Value />
+      </KeyValue>
+      <KeyValue>
+        <Key>com.sysprogs.bspoptions.stm32.ll_driver</Key>
+      </KeyValue>
       <KeyValue>
         <Key>com.sysprogs.bspoptions.stm32746g_discovery.audio</Key>
         <Value />
